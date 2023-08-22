@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.delivery.monitor.tables.TableMapper">
+
+    <!-- DROP TABLE Queries -->
+    <delete id="dropOrderDetails">
+        DROP TABLE IF EXISTS OrderDetails;
+    </delete>
+    <delete id="dropRecalls">
+        DROP TABLE IF EXISTS Recalls;
+    </delete>
+    <delete id="dropBaskets">
+        DROP TABLE IF EXISTS Baskets;
+    </delete>
+    <delete id="dropDeliveries">
+        DROP TABLE IF EXISTS Deliveries;
+    </delete>
+    <delete id="dropOrders">
+        DROP TABLE IF EXISTS Orders;
+    </delete>
+    <delete id="dropProducts">
+        DROP TABLE IF EXISTS Products;
+    </delete>
+    <delete id="dropAdmins">
+        DROP TABLE IF EXISTS Admins;
+    </delete>
+
+    <!-- CREATE TABLE Queries -->
+    <update id="createAdmins">
+        CREATE TABLE Admins (
+            admin_id INT AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(100) NOT NULL,
+            email VARCHAR(100) UNIQUE NOT NULL,
+            password VARCHAR(100) NOT NULL
+        );
+    </update>
+    <update id="createProducts">
+        CREATE TABLE Products (
+            product_id INT AUTO_INCREMENT PRIMARY KEY,  
+            product_name VARCHAR(100) NOT NULL,                 
+            price INT NOT NULL,                                 
+            category VARCHAR(100) NOT NULL, 
+            quantity_available INT NOT NULL,                    
+            last_update TIMESTAMP NOT NULL                       
+        );
+    </update>
+    <update id="createOrders">
+        CREATE TABLE Orders (
+            order_id INT AUTO_INCREMENT PRIMARY KEY,                            
+            customer_name VARCHAR(30) NOT NULL, 
+            quantity_ordered INT NOT NULL,                      
+            total_price INT NOT NULL,                          
+            latitude DECIMAL(8, 5) NOT NULL,  
+            longitude DECIMAL(9, 5) NOT NULL,                                             
+            order_date TIMESTAMP NOT NULL          
+        );
+    </update>
+    <update id="createDeliveries">
+        CREATE TABLE Deliveries (
+            delivery_id INT AUTO_INCREMENT PRIMARY KEY,                                
+            order_id INT NOT NULL,                                
+            delivery_status VARCHAR(20) NOT NULL,
+            latitude DECIMAL(8, 5) NOT NULL,
+            longitude DECIMAL(9, 5) NOT NULL,
+            delivery_date TIMESTAMP NOT NULL,               
+            FOREIGN KEY (order_id) REFERENCES Orders(order_id)
+        );
+    </update>
+    <update id="createBaskets">
+        CREATE TABLE Baskets (
+            basket_id INT AUTO_INCREMENT PRIMARY KEY, 
+            product_id INT NOT NULL,
+            delivery_id INT NOT NULL,
+            temperature DECIMAL(5, 2) NOT NULL,       
+            humidity DECIMAL(5, 2) NOT NULL,           
+            FOREIGN KEY (product_id) REFERENCES Products(product_id),
+            FOREIGN KEY (delivery_id) REFERENCES Deliveries(delivery_id)          
+        );
+    </update>
+    <update id="createRecalls">
+        CREATE TABLE Recalls (
+            recall_id INT AUTO_INCREMENT PRIMARY KEY,  
+            delivery_id INT NOT NULL,                           
+            is_recalled BOOLEAN NOT NULL,                      
+            recall_date TIMESTAMP NOT NULL,                        
+            postponed_delivery_date TIMESTAMP NOT NULL,            
+            FOREIGN KEY (delivery_id) REFERENCES Deliveries(delivery_id)  
+        );
+    </update>
+    <update id="createOrderDetails">
+        CREATE TABLE OrderDetails (
+            detail_id INT AUTO_INCREMENT PRIMARY KEY,
+            order_id INT NOT NULL,
+            product_id INT NOT NULL,
+            quantity INT NOT NULL,
+            price INT NOT NULL,
+            FOREIGN KEY (order_id) REFERENCES Orders(order_id),
+            FOREIGN KEY (product_id) REFERENCES Products(product_id)
+        );
+    </update>
+</mapper>

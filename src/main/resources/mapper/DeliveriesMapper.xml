@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.delivery.monitor.deliveries.DeliveriesMapper">
+
+    <insert id="autoInsertDeliveries" parameterType="Deliveries">
+        INSERT INTO Deliveries (order_id, delivery_status, latitude, longitude, delivery_date)
+        VALUES (#{order_id}, #{delivery_status}, #{latitude}, #{longitude}, CURRENT_TIMESTAMP)
+    </insert>
+
+    <select id="getLastInsertDeliveriesId" resultType="int">
+        SELECT LAST_INSERT_ID()
+    </select>
+
+    <select id="getLocations" resultType="Deliveries">
+        SELECT o.order_id, d.latitude, d.longitude
+        FROM Orders o
+        JOIN Deliveries d ON o.order_id = d.order_id
+        GROUP BY o.order_id, d.latitude, d.longitude;
+    </select>
+
+</mapper>

@@ -1,0 +1,657 @@
+[
+  {
+    "customer_name": "이동욱",
+    "latitude": 37.48621,
+    "longitude": 126.97883
+  },
+  {
+    "customer_name": "박수진",
+    "latitude": 37.48895,
+    "longitude": 126.97982
+  },
+  {
+    "customer_name": "최준영",
+    "latitude": 37.49194,
+    "longitude": 126.98579
+  },
+  {
+    "customer_name": "김소연",
+    "latitude": 37.48764,
+    "longitude": 126.99004
+  },
+  {
+    "customer_name": "정태희",
+    "latitude": 37.48473,
+    "longitude": 126.99148
+  },
+  {
+    "customer_name": "임준호",
+    "latitude": 37.48052,
+    "longitude": 127.00267
+  },
+  {
+    "customer_name": "한지원",
+    "latitude": 37.48823,
+    "longitude": 127.00713
+  },
+  {
+    "customer_name": "송미란",
+    "latitude": 37.50011,
+    "longitude": 127.01049
+  },
+  {
+    "customer_name": "이승현",
+    "latitude": 37.50758,
+    "longitude": 127.00812
+  },
+  {
+    "customer_name": "박영희",
+    "latitude": 37.50743,
+    "longitude": 127.01772
+  },
+  {
+    "customer_name": "황현우",
+    "latitude": 37.51002,
+    "longitude": 127.02936
+  },
+  {
+    "customer_name": "조수진",
+    "latitude": 37.51078,
+    "longitude": 127.01876
+  },
+  {
+    "customer_name": "강준영",
+    "latitude": 37.52024,
+    "longitude": 127.02396
+  },
+  {
+    "customer_name": "윤지수",
+    "latitude": 37.51992,
+    "longitude": 127.03403
+  },
+  {
+    "customer_name": "정민석",
+    "latitude": 37.51553,
+    "longitude": 127.03045
+  },
+  {
+    "customer_name": "박미경",
+    "latitude": 37.50686,
+    "longitude": 127.03503
+  },
+  {
+    "customer_name": "최성준",
+    "latitude": 37.49809,
+    "longitude": 127.03465
+  },
+  {
+    "customer_name": "이준영",
+    "latitude": 37.49874,
+    "longitude": 127.04404
+  },
+  {
+    "customer_name": "김지우",
+    "latitude": 37.53834,
+    "longitude": 127.07337
+  },
+  {
+    "customer_name": "이준호",
+    "latitude": 37.53721,
+    "longitude": 127.08242
+  },
+  {
+    "customer_name": "박서연",
+    "latitude": 37.5389,
+    "longitude": 127.06744
+  },
+  {
+    "customer_name": "최민석",
+    "latitude": 37.53753,
+    "longitude": 127.07172
+  },
+  {
+    "customer_name": "정유진",
+    "latitude": 37.53657,
+    "longitude": 127.08112
+  },
+  {
+    "customer_name": "강태훈",
+    "latitude": 37.54817,
+    "longitude": 127.05185
+  },
+  {
+    "customer_name": "윤영미",
+    "latitude": 37.56295,
+    "longitude": 127.04113
+  },
+  {
+    "customer_name": "한승우",
+    "latitude": 37.56872,
+    "longitude": 127.03194
+  },
+  {
+    "customer_name": "임지호",
+    "latitude": 37.54936,
+    "longitude": 127.04569
+  },
+  {
+    "customer_name": "손예진",
+    "latitude": 37.55023,
+    "longitude": 127.02188
+  },
+  {
+    "customer_name": "황수진",
+    "latitude": 37.56535,
+    "longitude": 127.06567
+  },
+  {
+    "customer_name": "서민재",
+    "latitude": 37.5514,
+    "longitude": 127.07281
+  },
+  {
+    "customer_name": "김승민",
+    "latitude": 37.55391,
+    "longitude": 127.09314
+  },
+  {
+    "customer_name": "이미경",
+    "latitude": 37.54209,
+    "longitude": 127.09647
+  },
+  {
+    "customer_name": "박현우",
+    "latitude": 37.53845,
+    "longitude": 127.09611
+  },
+  {
+    "customer_name": "조영미",
+    "latitude": 37.5279,
+    "longitude": 127.08175
+  },
+  {
+    "customer_name": "강미영",
+    "latitude": 37.58073,
+    "longitude": 127.08445
+  },
+  {
+    "customer_name": "유재석",
+    "latitude": 37.5818,
+    "longitude": 127.08047
+  },
+  {
+    "customer_name": "김지현",
+    "latitude": 37.57262,
+    "longitude": 127.08051
+  },
+  {
+    "customer_name": "김현호",
+    "latitude": 37.53663,
+    "longitude": 126.89351
+  },
+  {
+    "customer_name": "이지윤",
+    "latitude": 37.52582,
+    "longitude": 126.89665
+  },
+  {
+    "customer_name": "박혜진",
+    "latitude": 37.50695,
+    "longitude": 126.89024
+  },
+  {
+    "customer_name": "최민지",
+    "latitude": 37.51721,
+    "longitude": 126.90346
+  },
+  {
+    "customer_name": "김승호",
+    "latitude": 37.51313,
+    "longitude": 126.89725
+  },
+  {
+    "customer_name": "정영미",
+    "latitude": 37.5131,
+    "longitude": 126.95623
+  },
+  {
+    "customer_name": "강지원",
+    "latitude": 37.49556,
+    "longitude": 126.91524
+  },
+  {
+    "customer_name": "윤혜진",
+    "latitude": 37.52135,
+    "longitude": 126.93732
+  },
+  {
+    "customer_name": "임승호",
+    "latitude": 37.5298,
+    "longitude": 126.92579
+  },
+  {
+    "customer_name": "황지윤",
+    "latitude": 37.52576,
+    "longitude": 126.91509
+  },
+  {
+    "customer_name": "조민호",
+    "latitude": 37.51811,
+    "longitude": 126.92526
+  },
+  {
+    "customer_name": "박영미",
+    "latitude": 37.51016,
+    "longitude": 126.95629
+  },
+  {
+    "customer_name": "한현지",
+    "latitude": 37.504441,
+    "longitude": 126.94111
+  },
+  {
+    "customer_name": "송승호",
+    "latitude": 37.49772,
+    "longitude": 126.95441
+  },
+  {
+    "customer_name": "김민지",
+    "latitude": 37.48976,
+    "longitude": 126.95293
+  },
+  {
+    "customer_name": "이영호",
+    "latitude": 37.47644,
+    "longitude": 126.94629
+  },
+  {
+    "customer_name": "박현지",
+    "latitude": 37.48952,
+    "longitude": 126.96276
+  },
+  {
+    "customer_name": "최지원",
+    "latitude": 37.49258,
+    "longitude": 126.98159
+  },
+  {
+    "customer_name": "김승윤",
+    "latitude": 37.48241,
+    "longitude": 126.94673
+  },
+  {
+    "customer_name": "정영호",
+    "latitude": 37.49127,
+    "longitude": 126.97522
+  },
+  {
+    "customer_name": "박현숙",
+    "latitude": 37.57732,
+    "longitude": 126.93782
+  },
+  {
+    "customer_name": "손지훈",
+    "latitude": 37.5721,
+    "longitude": 126.94897
+  },
+  {
+    "customer_name": "강수진",
+    "latitude": 37.58042,
+    "longitude": 126.94426
+  },
+  {
+    "customer_name": "김현우",
+    "latitude": 37.57428,
+    "longitude": 126.92251
+  },
+  {
+    "customer_name": "이영미",
+    "latitude": 37.5716,
+    "longitude": 126.93083
+  },
+  {
+    "customer_name": "정민준",
+    "latitude": 37.57871,
+    "longitude": 126.95239
+  },
+  {
+    "customer_name": "황미란",
+    "latitude": 37.56637,
+    "longitude": 126.92873
+  },
+  {
+    "customer_name": "조민지",
+    "latitude": 37.57082,
+    "longitude": 126.93919
+  },
+  {
+    "customer_name": "강재호",
+    "latitude": 37.57904,
+    "longitude": 126.92611
+  },
+  {
+    "customer_name": "박지원",
+    "latitude": 37.56869,
+    "longitude": 126.94171
+  },
+  {
+    "customer_name": "김지민",
+    "latitude": 37.5779,
+    "longitude": 126.93629
+  },
+  {
+    "customer_name": "이영희",
+    "latitude": 37.5817,
+    "longitude": 126.95387
+  },
+  {
+    "customer_name": "정민지",
+    "latitude": 37.56753,
+    "longitude": 126.93217
+  },
+  {
+    "customer_name": "강현우",
+    "latitude": 37.57495,
+    "longitude": 126.93868
+  },
+  {
+    "customer_name": "윤수진",
+    "latitude": 37.58019,
+    "longitude": 126.92994
+  },
+  {
+    "customer_name": "임민준",
+    "latitude": 37.56903,
+    "longitude": 126.92662
+  },
+  {
+    "customer_name": "김현호",
+    "latitude": 37.53663,
+    "longitude": 126.89351
+  },
+  {
+    "customer_name": "이지윤",
+    "latitude": 37.52582,
+    "longitude": 126.89665
+  },
+  {
+    "customer_name": "박혜진",
+    "latitude": 37.50695,
+    "longitude": 126.89024
+  },
+  {
+    "customer_name": "최민지",
+    "latitude": 37.51721,
+    "longitude": 126.90346
+  },
+  {
+    "customer_name": "김승호",
+    "latitude": 37.51313,
+    "longitude": 126.89725
+  },
+  {
+    "customer_name": "정영미",
+    "latitude": 37.5131,
+    "longitude": 126.95623
+  },
+  {
+    "customer_name": "강지원",
+    "latitude": 37.49556,
+    "longitude": 126.91524
+  },
+  {
+    "customer_name": "윤혜진",
+    "latitude": 37.52135,
+    "longitude": 126.93732
+  },
+  {
+    "customer_name": "임승호",
+    "latitude": 37.5298,
+    "longitude": 126.92579
+  },
+  {
+    "customer_name": "황지윤",
+    "latitude": 37.52576,
+    "longitude": 126.91509
+  },
+  {
+    "customer_name": "조민호",
+    "latitude": 37.51811,
+    "longitude": 126.92526
+  },
+  {
+    "customer_name": "박영미",
+    "latitude": 37.51016,
+    "longitude": 126.95629
+  },
+  {
+    "customer_name": "한현지",
+    "latitude": 37.504441,
+    "longitude": 126.94111
+  },
+  {
+    "customer_name": "송승호",
+    "latitude": 37.49772,
+    "longitude": 126.95441
+  },
+  {
+    "customer_name": "김민지",
+    "latitude": 37.48976,
+    "longitude": 126.95293
+  },
+  {
+    "customer_name": "이영호",
+    "latitude": 37.47644,
+    "longitude": 126.94629
+  },
+  {
+    "customer_name": "박현지",
+    "latitude": 37.48952,
+    "longitude": 126.96276
+  },
+  {
+    "customer_name": "최지원",
+    "latitude": 37.49258,
+    "longitude": 126.98159
+  },
+  {
+    "customer_name": "김승윤",
+    "latitude": 37.48241,
+    "longitude": 126.94673
+  },
+  {
+    "customer_name": "정영호",
+    "latitude": 37.49127,
+    "longitude": 126.97522
+  },
+  {
+    "customer_name": "임지영",
+    "latitude": 37.5201,
+    "longitude": 126.97034
+  },
+  {
+    "customer_name": "황민재",
+    "latitude": 37.52435,
+    "longitude": 126.96717
+  },
+  {
+    "customer_name": "조영희",
+    "latitude": 37.53332,
+    "longitude": 126.97409
+  },
+  {
+    "customer_name": "박현미",
+    "latitude": 37.54563,
+    "longitude": 126.97981
+  },
+  {
+    "customer_name": "한승준",
+    "latitude": 37.54371,
+    "longitude": 126.98728
+  },
+  {
+    "customer_name": "송지윤",
+    "latitude": 37.56032,
+    "longitude": 126.98084
+  },
+  {
+    "customer_name": "김주호",
+    "latitude": 37.57004,
+    "longitude": 126.999287
+  },
+  {
+    "customer_name": "이지원",
+    "latitude": 37.57346,
+    "longitude": 127.01448
+  },
+  {
+    "customer_name": "박민지",
+    "latitude": 37.56235,
+    "longitude": 127.01684
+  },
+  {
+    "customer_name": "최현우",
+    "latitude": 37.55674,
+    "longitude": 127.01367
+  },
+  {
+    "customer_name": "김혜진",
+    "latitude": 37.5524,
+    "longitude": 127.02309
+  },
+  {
+    "customer_name": "정민지",
+    "latitude": 37.55527,
+    "longitude": 127.02564
+  },
+  {
+    "customer_name": "강현지",
+    "latitude": 37.56074,
+    "longitude": 127.03006
+  },
+  {
+    "customer_name": "윤민재",
+    "latitude": 37.55838,
+    "longitude": 127.03706
+  },
+  {
+    "customer_name": "임영미",
+    "latitude": 37.55563,
+    "longitude": 127.03658
+  },
+  {
+    "customer_name": "황승호",
+    "latitude": 37.56171,
+    "longitude": 127.04317
+  },
+  {
+    "customer_name": "조현지",
+    "latitude": 37.55457,
+    "longitude": 127.04511
+  },
+  {
+    "customer_name": "박주호",
+    "latitude": 37.58234,
+    "longitude": 127.05672
+  },
+  {
+    "customer_name": "송민지",
+    "latitude": 37.52699,
+    "longitude": 127.00284
+  },
+  {
+    "customer_name": "조재호",
+    "latitude": 37.456234,
+    "longitude": 126.89699
+  },
+  {
+    "customer_name": "박미란",
+    "latitude": 37.464876,
+    "longitude": 126.90535
+  },
+  {
+    "customer_name": "최수진",
+    "latitude": 37.46098,
+    "longitude": 126.89874
+  },
+  {
+    "customer_name": "김재영",
+    "latitude": 37.45994,
+    "longitude": 126.89839
+  },
+  {
+    "customer_name": "이은미",
+    "latitude": 37.46053,
+    "longitude": 126.89558
+  },
+  {
+    "customer_name": "정민호",
+    "latitude": 37.46031,
+    "longitude": 126.89525
+  },
+  {
+    "customer_name": "강영희",
+    "latitude": 37.46824,
+    "longitude": 126.90498
+  },
+  {
+    "customer_name": "윤지희",
+    "latitude": 37.46414,
+    "longitude": 126.89180
+  },
+  {
+    "customer_name": "임현우",
+    "latitude": 37.47510,
+    "longitude": 126.88333
+  },
+  {
+    "customer_name": "한민지",
+    "latitude": 37.47458,
+    "longitude": 126.88283
+  },
+  {
+    "customer_name": "송재호",
+    "latitude": 37.47500,
+    "longitude": 126.88145
+  },
+  {
+    "customer_name": "김지선",
+    "latitude": 37.47554,
+    "longitude": 126.88140
+  },
+  {
+    "customer_name": "이수진",
+    "latitude": 37.45635,
+    "longitude": 126.90148
+  },
+  {
+    "customer_name": "박민호",
+    "latitude": 37.47290,
+    "longitude": 126.90012
+  },
+  {
+    "customer_name": "최영희",
+    "latitude": 37.47364,
+    "longitude": 126.90774
+  },
+  {
+    "customer_name": "김현지",
+    "latitude": 37.47375,
+    "longitude": 126.90893
+  },
+  {
+    "customer_name": "정민선",
+    "latitude": 37.47428,
+    "longitude": 126.90716
+  },
+  {
+    "customer_name": "강승준",
+    "latitude": 37.47555,
+    "longitude": 126.90662
+  },
+  {
+    "customer_name": "윤서연",
+    "latitude": 37.47622,
+    "longitude": 126.90860
+  }
+]

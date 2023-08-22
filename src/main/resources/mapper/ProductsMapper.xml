@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.delivery.monitor.products.ProductsMapper">
+
+    <insert id="autoInsertProducts">
+        INSERT INTO Products (product_name, price, category, quantity_available, last_update)
+        VALUES
+        <foreach collection="products" item="product" separator=",">
+            (#{product.product_name}, #{product.price}, #{product.category}, 100, CURRENT_TIMESTAMP)
+        </foreach>
+    </insert>
+
+    <select id="getRandomProducts" parameterType="int" resultType="Products">
+        SELECT * 
+        FROM Products 
+        ORDER BY RAND() 
+        LIMIT #{count}
+    </select>
+
+    <update id="inventoryReduction">
+        UPDATE Products
+        SET quantity_available = quantity_available - #{sale}
+        WHERE product_id = #{product_id} AND quantity_available >= #{sale}
+    </update>
+
+    <select id="getCategoryByProductsId" resultType="string">
+        SELECT category 
+        FROM Products 
+        WHERE product_id = #{product_id}
+    </select>
+
+</mapper>

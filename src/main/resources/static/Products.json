@@ -1,0 +1,502 @@
+[
+  {
+    "product_name": "과일치즈",
+    "price": 4900,
+    "category": "유제품"
+  },
+  {
+    "product_name": "머추어 체다 치즈",
+    "price": 9400,
+    "category": "유제품"
+  },
+  {
+    "product_name": "모짜렐라 스낵팩",
+    "price": 10900,
+    "category": "유제품"
+  },
+  {
+    "product_name": "몽태버 슬라이스 치즈",
+    "price": 9600,
+    "category": "유제품"
+  },
+  {
+    "product_name": "아메리칸 체다 슬라이스",
+    "price": 9800,
+    "category": "유제품"
+  },
+  {
+    "product_name": "와사비 스모크 치즈",
+    "price": 5200,
+    "category": "유제품"
+  },
+  {
+    "product_name": "파마산 스낵팩",
+    "price": 10900,
+    "category": "유제품"
+  },
+  {
+    "product_name": "페스토 로쏘 치즈",
+    "price": 11900,
+    "category": "유제품"
+  },
+  {
+    "product_name": "폰티나 치즈 스낵팩",
+    "price": 10900,
+    "category": "유제품"
+  },
+  {
+    "product_name": "프랑스 린고 치즈",
+    "price": 11800,
+    "category": "유제품"
+  },
+  {
+    "product_name": "나 100% 우유",
+    "price": 5350,
+    "category": "유제품"
+  },
+  {
+    "product_name": "그릭데이 그릭요거트",
+    "price": 13500,
+    "category": "유제품"
+  },
+  {
+    "product_name": "소화가 잘되는 우유",
+    "price": 3580,
+    "category": "유제품"
+  },
+  {
+    "product_name": "뉴케어 구수한 맛",
+    "price": 48900,
+    "category": "유제품"
+  },
+  {
+    "product_name": "아몬드 브리즈",
+    "price": 17500,
+    "category": "유제품"
+  },
+  {
+    "product_name": "뉴케어 액티브 골든밸런스",
+    "price": 52900,
+    "category": "유제품"
+  },
+  {
+    "product_name": "비요뜨 요거트",
+    "price": 1380,
+    "category": "유제품"
+  },
+  {
+    "product_name": "생크림",
+    "price": 6580,
+    "category": "유제품"
+  },
+  {
+    "product_name": "삼각 커피 우유",
+    "price": 3820,
+    "category": "유제품"
+  },
+  {
+    "product_name": "아이슬란딕 요거트볼 키트",
+    "price": 5900,
+    "category": "유제품"
+  },
+  {
+    "product_name": "바나나맛 우유",
+    "price": 5500,
+    "category": "유제품"
+  },
+  {
+    "product_name": "블루베리 콩포트 그릭요거트",
+    "price": 4400,
+    "category": "유제품"
+  },
+  {
+    "product_name": "짜먹는 요구르트 짜요짜요",
+    "price": 2350,
+    "category": "유제품"
+  },
+  {
+    "product_name": "식물성 귀리 음료",
+    "price": 6800,
+    "category": "유제품"
+  },
+  {
+    "product_name": "국산 우유로 만든 연유",
+    "price": 5380,
+    "category": "유제품"
+  },
+  {
+    "product_name": "한우 국거리",
+    "price": 14900,
+    "category": "육류"
+  },
+  {
+    "product_name": "한우 절단국거리용",
+    "price": 15900,
+    "category": "육류"
+  },
+  {
+    "product_name": "다짐육",
+    "price": 7740,
+    "category": "육류"
+  },
+  {
+    "product_name": "닭가슴살 큐브 스테이크",
+    "price": 8900,
+    "category": "육류"
+  },
+  {
+    "product_name": "돌돌말이 대패 삼겹살",
+    "price": 15990,
+    "category": "육류"
+  },
+  {
+    "product_name": "한우 등심 구이용",
+    "price": 37900,
+    "category": "육류"
+  },
+  {
+    "product_name": "닭 다리살",
+    "price": 8900,
+    "category": "육류"
+  },
+  {
+    "product_name": "삼계탕용 두마리 통닭",
+    "price": 10900,
+    "category": "육류"
+  },
+  {
+    "product_name": "소고기 등심 구이용",
+    "price": 13500,
+    "category": "육류"
+  },
+  {
+    "product_name": "안심 스테이크",
+    "price": 38800,
+    "category": "육류"
+  },
+  {
+    "product_name": "야채담은 소불고기",
+    "price": 11500,
+    "category": "육류"
+  },
+  {
+    "product_name": "양념 LA 갈비",
+    "price": 34900,
+    "category": "육류"
+  },
+  {
+    "product_name": "양념 소불고기",
+    "price": 19990,
+    "category": "육류"
+  },
+  {
+    "product_name": "오리지널 바베큐폭립",
+    "price": 23500,
+    "category": "육류"
+  },
+  {
+    "product_name": "춘천식 닭갈비",
+    "price": 12900,
+    "category": "육류"
+  },
+  {
+    "product_name": "한돈 고추장양념 돼지불고기",
+    "price": 12900,
+    "category": "육류"
+  },
+  {
+    "product_name": "한돈 급냉 삼겹살",
+    "price": 15900,
+    "category": "육류"
+  },
+  {
+    "product_name": "한돈 목살 구이용",
+    "price": 16800,
+    "category": "육류"
+  },
+  {
+    "product_name": "한돈 목살 양념 구이",
+    "price": 14900,
+    "category": "육류"
+  },
+  {
+    "product_name": "한돈 삼겹살 구이용",
+    "price": 17350,
+    "category": "육류"
+  },
+  {
+    "product_name": "한돈 수육용",
+    "price": 10500,
+    "category": "육류"
+  },
+  {
+    "product_name": "목초육 안심 스테이크",
+    "price": 22900,
+    "category": "육류"
+  },
+  {
+    "product_name": "목초육 치마살 구이용",
+    "price": 15500,
+    "category": "육류"
+  },
+  {
+    "product_name": "훈제오리",
+    "price": 9400,
+    "category": "육류"
+  },
+  {
+    "product_name": "훈제오리 슬라이스",
+    "price": 5190,
+    "category": "육류"
+  },
+  {
+    "product_name": "다다기오이",
+    "price": 3990,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "꿀고구마",
+    "price": 15200,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "감자",
+    "price": 3990,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "양파",
+    "price": 3590,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "브로콜리",
+    "price": 2990,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "흙당근",
+    "price": 4890,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "청상추",
+    "price": 4990,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "파프리카",
+    "price": 2990,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "청경채",
+    "price": 4990,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "새송이버섯",
+    "price": 2290,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "사과",
+    "price": 12900,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "샤인머스캣",
+    "price": 12990,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "자두",
+    "price": 11900,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "감귤",
+    "price": 11900,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "포도",
+    "price": 21900,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "토마토",
+    "price": 6980,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "애플망고",
+    "price": 37100,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "무화과",
+    "price": 14900,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "블루베리",
+    "price": 14900,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "바나나",
+    "price": 3190,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "골드키위",
+    "price": 12900,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "아보카도",
+    "price": 890,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "레몬",
+    "price": 9900,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "자몽",
+    "price": 7565,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "용과",
+    "price": 3290,
+    "category": "야채/과일"
+  },
+  {
+    "product_name": "항공직송 생물 손질 쭈꾸미",
+    "price": 11900,
+    "category": "수산물"
+  },
+  {
+    "product_name": "생성게알",
+    "price": 25330,
+    "category": "수산물"
+  },
+  {
+    "product_name": "홍합살 대",
+    "price": 4900,
+    "category": "수산물"
+  },
+  {
+    "product_name": "프리미엄 생새우살",
+    "price": 7400,
+    "category": "수산물"
+  },
+  {
+    "product_name": "자연산 동강 깐다슬기",
+    "price": 13900,
+    "category": "수산물"
+  },
+  {
+    "product_name": "국내산 손질 민물장어",
+    "price": 27900,
+    "category": "수산물"
+  },
+  {
+    "product_name": "제주 고등어살(특대)",
+    "price": 3900,
+    "category": "수산물"
+  },
+  {
+    "product_name": "찜부세 보리굴비(중)",
+    "price": 9900,
+    "category": "수산물"
+  },
+  {
+    "product_name": "손질 코다리",
+    "price": 5900,
+    "category": "수산물"
+  },
+  {
+    "product_name": "손질 동태",
+    "price": 5900,
+    "category": "수산물"
+  },
+  {
+    "product_name": "자연산 돌문어",
+    "price": 40900,
+    "category": "수산물"
+  },
+  {
+    "product_name": "손질된 갑오징어",
+    "price": 5900,
+    "category": "수산물"
+  },
+  {
+    "product_name": "자연산 붉은 새우 세트",
+    "price": 13900,
+    "category": "수산물"
+  },
+  {
+    "product_name": "연평도 알찬 꽃게 2종",
+    "price": 17450,
+    "category": "수산물"
+  },
+  {
+    "product_name": "해조류 5종",
+    "price": 2210,
+    "category": "수산물"
+  },
+  {
+    "product_name": "간편한 손질 오징어",
+    "price": 4500,
+    "category": "수산물"
+  },
+  {
+    "product_name": "딱새우회",
+    "price": 15900,
+    "category": "수산물"
+  },
+  {
+    "product_name": "손질 임연수",
+    "price": 5100,
+    "category": "수산물"
+  },
+  {
+    "product_name": "8단계 선별한 국물용 멸치",
+    "price": 7110,
+    "category": "수산물"
+  },
+  {
+    "product_name": "삼천포에서 부드럽게 구운 물메기포",
+    "price": 8900,
+    "category": "수산물"
+  },
+  {
+    "product_name": "오징어 젓갈",
+    "price": 7210,
+    "category": "수산물"
+  },
+  {
+    "product_name": "자연산 왕새우 세트",
+    "price": 165110,
+    "category": "수산물"
+  },
+  {
+    "product_name": "꽁치",
+    "price": 4480,
+    "category": "수산물"
+  },
+  {
+    "product_name": "강원도 황태채포세트",
+    "price": 50000,
+    "category": "수산물"
+  },
+  {
+    "product_name": "순날치알 골드",
+    "price": 8980,
+    "category": "수산물"
+  }
+]
