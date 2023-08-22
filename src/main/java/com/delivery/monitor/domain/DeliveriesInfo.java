@@ -9,10 +9,9 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Baskets {
-    private int basket_id;
-    private int product_id;
-    private int delivery_id;
-    private double temperature;
-    private double humidity;
+public class DeliveriesInfo {
+    private double startLatitude;
+    private double startLongitude;
+    private double arrivalLatitude;
+    private double arrivalLongitude;
 }

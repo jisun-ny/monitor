@@ -15,7 +15,6 @@ public class AdminsGenerator {
 
     // 관리자 정보를 생성하고 DB에 삽입하는 메서드
     public void insertAdmins() {
-        log.info("관리자 등록");
         try {
             Admins admins = Admins.builder()
                     .name("admin")

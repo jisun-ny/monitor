@@ -32,7 +32,6 @@ public class OrdersGenerator {
     @Transactional
     @Scheduled(initialDelay = 3000, fixedRate = 18000)
     public void autoInsertOrders() {
-        log.info("주문 등록");
         try {
             processOrders();
         } catch (Exception e) {

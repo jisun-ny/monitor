@@ -18,14 +18,15 @@ public class DeliveriesGenerator {
 
     private final DeliveriesMapper deliveriesMapper;
     private final BasketsGenerator basketsGenerator;
+    private final DeliveriesService deliveriesService;
 
     // 주어진 orderId와 productId를 기반으로 Deliveries 객체를 생성하고 DB에 삽입하는 메서드
     @Transactional
     public void autoInsertDeliveries(int orderId, int productId) {
-        log.info("배송 등록");
         try {
             deliveriesMapper.autoInsertDeliveries(createDeliveries(orderId));
             basketsGenerator.autoInsertBaskets(productId, deliveriesMapper.getLastInsertDeliveriesId());
+            deliveriesService.getDeliveriesInfos(orderId);
         } catch (NumberFormatException e) {
             handleNumberFormatException(e);
         } catch (Exception e) {
@@ -38,8 +39,8 @@ public class DeliveriesGenerator {
         return Deliveries.builder()
                 .order_id(orderId)
                 .delivery_status("배송중")
-                .latitude(new BigDecimal(37.52318))
-                .longitude(new BigDecimal(126.95853))
+                .latitude(37.52318)
+                .longitude(126.95853)
                 .build();
     }
 
