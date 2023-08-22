@@ -17,8 +17,8 @@ public class Orders {
     private String customer_name;
     private int quantity_ordered;
     private int total_price;
-    private BigDecimal latitude;
-    private BigDecimal longitude;
+    private double latitude;
+    private double longitude;
     private Timestamp order_date;
     
 }

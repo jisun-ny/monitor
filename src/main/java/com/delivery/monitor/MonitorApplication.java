@@ -8,7 +8,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 import com.delivery.monitor.admins.AdminsGenerator;
 import com.delivery.monitor.products.ProductsGenerator;
-import com.delivery.monitor.tables.TableGenerator;
+import com.delivery.monitor.tables.DataReset;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -22,7 +22,7 @@ public class MonitorApplication {
 	}
 
 	@Bean
-	CommandLineRunner runner(TableGenerator tableGenerator, ProductsGenerator productsGenerator,
+	CommandLineRunner runner(DataReset tableGenerator, ProductsGenerator productsGenerator,
 			AdminsGenerator adminsGenerator) {
 		return args -> {
 			log.info("Initializing database");

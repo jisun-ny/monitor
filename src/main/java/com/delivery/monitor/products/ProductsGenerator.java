@@ -26,7 +26,6 @@ public class ProductsGenerator {
     // 제품 정보를 JSON 파일에서 읽어와 DB에 삽입하는 메서드
     @Transactional
     public void loadProductsFromFile() {
-        log.info("상품 등록");
         try (InputStream inputStream = getProductsJsonInputStream()) {
             insertProductsIntoDatabase(readProductsFromJson(inputStream));
         } catch (IOException e) {

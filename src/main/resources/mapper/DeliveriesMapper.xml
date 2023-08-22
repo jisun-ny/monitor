@@ -19,4 +19,15 @@
         GROUP BY o.order_id, d.latitude, d.longitude;
     </select>
 
+    <select id="getDeliveryCoordinates" resultType="DeliveriesInfo" parameterType="int">
+        SELECT DISTINCT
+            d.latitude AS startLatitude, 
+            d.longitude AS startLongitude,
+            o.latitude AS arrivalLatitude,
+            o.longitude AS arrivalLongitude
+        FROM Orders o
+        JOIN Deliveries d ON o.order_id = d.order_id
+        WHERE o.order_id = #{order_id};
+    </select>
+
 </mapper>

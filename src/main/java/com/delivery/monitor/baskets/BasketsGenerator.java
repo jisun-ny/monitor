@@ -30,7 +30,6 @@ public class BasketsGenerator {
     // 주어진 productId와 deliveryId를 기반으로 Baskets 객체를 생성하고 DB에 삽입하는 메서드
     @Transactional
     public void autoInsertBaskets(int productId, int deliveryId) {
-        log.info("바구니 등록");
         try {
             double tempMin, tempMax, humidMin, humidMax;
             // 제품 카테고리 별로 온도 및 습도 범위 설정
@@ -61,8 +60,8 @@ public class BasketsGenerator {
         return Baskets.builder()
                 .product_id(productId)
                 .delivery_id(deliveryId)
-                .temperature(BigDecimal.valueOf(randomDouble(tempMin, tempMax)))
-                .humidity(BigDecimal.valueOf(randomDouble(humidMin, humidMax)))
+                .temperature(randomDouble(tempMin, tempMax))
+                .humidity(randomDouble(humidMin, humidMax))
                 .build();
     }
 

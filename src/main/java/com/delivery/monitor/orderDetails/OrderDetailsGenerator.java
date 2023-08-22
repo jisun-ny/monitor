@@ -24,7 +24,6 @@ public class OrderDetailsGenerator {
     // 주어진 orderId와 randomProducts 리스트를 사용하여 OrderDetails 객체를 생성하고 DB에 삽입하는 메서드
     @Transactional
     public void autoInsertOrderDetails(int orderId, final List<Products> randomProducts) {
-        log.info("주문 상세 등록");
         try {
             randomProducts.forEach(product -> insertOrderDetailAndDelivery(orderId, product));
         } catch (DataAccessException e) {
