@@ -30,7 +30,6 @@ public class Info {
     public static class Summary {
         private Coordinate origin; // 시작점 좌표
         private Coordinate destination; // 도착점 좌표
-        private double distance; // 전체 거리 (미터 단위)
         private double duration; // 전체 소요 시간 (초 단위)
     }
 

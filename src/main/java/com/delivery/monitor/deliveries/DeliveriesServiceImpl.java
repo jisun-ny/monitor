@@ -2,7 +2,7 @@ package com.delivery.monitor.deliveries;
 
 import com.delivery.monitor.domain.DeliveriesInfo;
 import com.delivery.monitor.domain.Info;
-import com.delivery.monitor.mqtt.MonitorService;
+import com.delivery.monitor.path.PathSegmentService;
 import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -22,7 +22,7 @@ import org.springframework.web.client.RestTemplate;
 public class DeliveriesServiceImpl implements DeliveriesService {
 
     private final DeliveriesMapper deliveriesMapper;
-    private final MonitorService monitorService;
+    private final PathSegmentService pathSegmentService;
 
     @Value("${kakao.api.key}")
     private String kakaoApiKey;
@@ -32,7 +32,7 @@ public class DeliveriesServiceImpl implements DeliveriesService {
     public void getDeliveriesInfos(int order_id) {
         try {
             Info info = fetchDeliveryInfoFromKakao(deliveriesMapper.getDeliveryCoordinates(order_id));
-            monitorService.publishMessage(new Gson().toJson(info));
+            pathSegmentService.setPathSegments(info);
         } catch (Exception e) {
             log.error("Failed to retrieve delivery information", e);
             throw new RuntimeException("Failed to retrieve delivery information", e);

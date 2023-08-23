@@ -30,7 +30,7 @@ public class OrdersGenerator {
 
     // 주기적으로 자동 주문을 생성하고 DB에 삽입하는 메서드
     @Transactional
-    @Scheduled(initialDelay = 3000, fixedRate = 18000)
+    @Scheduled(initialDelay = 3000, fixedRate = 180000)
     public void autoInsertOrders() {
         try {
             processOrders();

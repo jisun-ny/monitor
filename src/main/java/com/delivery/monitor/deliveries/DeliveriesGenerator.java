@@ -1,7 +1,5 @@
 package com.delivery.monitor.deliveries;
 
-import java.math.BigDecimal;
-
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
