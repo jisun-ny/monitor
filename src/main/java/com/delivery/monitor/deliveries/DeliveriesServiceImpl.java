@@ -32,7 +32,7 @@ public class DeliveriesServiceImpl implements DeliveriesService {
     public void getDeliveriesInfos(int order_id) {
         try {
             Info info = fetchDeliveryInfoFromKakao(deliveriesMapper.getDeliveryCoordinates(order_id));
-            pathSegmentService.setPathSegments(info);
+            pathSegmentService.setPathSegments(info, order_id);
         } catch (Exception e) {
             log.error("Failed to retrieve delivery information", e);
             throw new RuntimeException("Failed to retrieve delivery information", e);
