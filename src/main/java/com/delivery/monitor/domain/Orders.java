@@ -1,6 +1,5 @@
 package com.delivery.monitor.domain;
 
-import java.math.BigDecimal;
 import java.sql.Timestamp;
 
 import lombok.AllArgsConstructor;
