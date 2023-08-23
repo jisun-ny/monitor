@@ -7,7 +7,7 @@ import com.delivery.monitor.domain.Info.Coordinate;
 
 public interface PathSegmentService {
     boolean hasSegments();
-    void setPathSegments(Info info);
+    void setPathSegments(Info info, int order_id);
     String getNextSegment();
     List<Coordinate> splitPathInfo(Info info);
 }
