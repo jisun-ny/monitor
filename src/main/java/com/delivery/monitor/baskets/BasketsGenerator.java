@@ -1,10 +1,8 @@
 package com.delivery.monitor.baskets;
 
-import java.math.BigDecimal;
 import java.util.Random;
 
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.delivery.monitor.domain.Baskets;
 import com.delivery.monitor.products.ProductsMapper;
@@ -28,7 +26,6 @@ public class BasketsGenerator {
     }
 
     // 주어진 productId와 deliveryId를 기반으로 Baskets 객체를 생성하고 DB에 삽입하는 메서드
-    @Transactional
     public void autoInsertBaskets(int productId, int deliveryId) {
         try {
             double tempMin, tempMax, humidMin, humidMax;

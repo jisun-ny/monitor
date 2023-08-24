@@ -2,10 +2,15 @@ package com.delivery.monitor.deliveries;
 
 import com.delivery.monitor.domain.DeliveriesInfo;
 import com.delivery.monitor.domain.Info;
-import com.delivery.monitor.path.PathSegmentService;
+import com.delivery.monitor.message.MessageService;
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+
+import java.util.HashSet;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -13,7 +18,6 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
 
 @Slf4j
@@ -21,18 +25,28 @@ import org.springframework.web.client.RestTemplate;
 @RequiredArgsConstructor
 public class DeliveriesServiceImpl implements DeliveriesService {
 
+    private static final Gson gson = new Gson();
+    private final HashSet<Integer> processedOrderIds = new HashSet<>();
+
     private final DeliveriesMapper deliveriesMapper;
-    private final PathSegmentService pathSegmentService;
+    private final MessageService messageService;
 
     @Value("${kakao.api.key}")
     private String kakaoApiKey;
 
     @Override
-    @Transactional
     public void getDeliveriesInfos(int order_id) {
+        if (processedOrderIds.contains(order_id)) {
+            log.info("Order ID " + order_id + " has already been processed.");
+            return;
+        }
         try {
             Info info = fetchDeliveryInfoFromKakao(deliveriesMapper.getDeliveryCoordinates(order_id));
-            pathSegmentService.setPathSegments(info, order_id);
+            // JsonObject jsonObject = new JsonObject();
+            // jsonObject.addProperty("order_id", order_id);
+            // jsonObject.add("info", gson.toJsonTree(info));
+            // messageService.sendMessage(jsonObject.toString());
+            processedOrderIds.add(order_id);
         } catch (Exception e) {
             log.error("Failed to retrieve delivery information", e);
             throw new RuntimeException("Failed to retrieve delivery information", e);
