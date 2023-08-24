@@ -2,9 +2,7 @@ package com.delivery.monitor.deliveries;
 
 import com.delivery.monitor.domain.DeliveriesInfo;
 import com.delivery.monitor.domain.Info;
-import com.delivery.monitor.message.MessageService;
 import com.google.gson.Gson;
-import com.google.gson.JsonObject;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -25,27 +23,19 @@ import org.springframework.web.client.RestTemplate;
 @RequiredArgsConstructor
 public class DeliveriesServiceImpl implements DeliveriesService {
 
-    private static final Gson gson = new Gson();
     private final HashSet<Integer> processedOrderIds = new HashSet<>();
-
     private final DeliveriesMapper deliveriesMapper;
-    private final MessageService messageService;
+    private final CoordinateSender coordinateSender;
 
     @Value("${kakao.api.key}")
     private String kakaoApiKey;
 
     @Override
     public void getDeliveriesInfos(int order_id) {
-        if (processedOrderIds.contains(order_id)) {
-            log.info("Order ID " + order_id + " has already been processed.");
-            return;
-        }
+        if (processedOrderIds.contains(order_id)) return;
         try {
             Info info = fetchDeliveryInfoFromKakao(deliveriesMapper.getDeliveryCoordinates(order_id));
-            // JsonObject jsonObject = new JsonObject();
-            // jsonObject.addProperty("order_id", order_id);
-            // jsonObject.add("info", gson.toJsonTree(info));
-            // messageService.sendMessage(jsonObject.toString());
+            coordinateSender.sendCoordinates(info, order_id);
             processedOrderIds.add(order_id);
         } catch (Exception e) {
             log.error("Failed to retrieve delivery information", e);
