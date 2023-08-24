@@ -1,7 +1,6 @@
 package com.delivery.monitor.deliveries;
 
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.delivery.monitor.baskets.BasketsGenerator;
 import com.delivery.monitor.domain.Deliveries;
@@ -19,7 +18,6 @@ public class DeliveriesGenerator {
     private final DeliveriesService deliveriesService;
 
     // 주어진 orderId와 productId를 기반으로 Deliveries 객체를 생성하고 DB에 삽입하는 메서드
-    @Transactional
     public void autoInsertDeliveries(int orderId, int productId) {
         try {
             deliveriesMapper.autoInsertDeliveries(createDeliveries(orderId));

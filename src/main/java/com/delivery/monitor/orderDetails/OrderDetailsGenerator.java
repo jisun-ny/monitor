@@ -4,7 +4,6 @@ import org.springframework.dao.DataAccessException;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.delivery.monitor.deliveries.DeliveriesGenerator;
 import com.delivery.monitor.domain.OrderDetails;
@@ -22,7 +21,6 @@ public class OrderDetailsGenerator {
     private final DeliveriesGenerator deliveriesGenerator;
 
     // 주어진 orderId와 randomProducts 리스트를 사용하여 OrderDetails 객체를 생성하고 DB에 삽입하는 메서드
-    @Transactional
     public void autoInsertOrderDetails(int orderId, final List<Products> randomProducts) {
         try {
             randomProducts.forEach(product -> insertOrderDetailAndDelivery(orderId, product));

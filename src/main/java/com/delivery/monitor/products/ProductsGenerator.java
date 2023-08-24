@@ -7,7 +7,6 @@ import java.util.List;
 
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.delivery.monitor.domain.Products;
 import com.google.gson.GsonBuilder;
@@ -24,7 +23,6 @@ public class ProductsGenerator {
     private final ProductsMapper productsMapper;
 
     // 제품 정보를 JSON 파일에서 읽어와 DB에 삽입하는 메서드
-    @Transactional
     public void loadProductsFromFile() {
         try (InputStream inputStream = getProductsJsonInputStream()) {
             insertProductsIntoDatabase(readProductsFromJson(inputStream));
