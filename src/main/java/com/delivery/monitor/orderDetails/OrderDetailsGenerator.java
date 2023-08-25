@@ -20,7 +20,12 @@ public class OrderDetailsGenerator {
     private final OrderDetailsMapper orderDetailsMapper;
     private final DeliveriesGenerator deliveriesGenerator;
 
-    // 주어진 orderId와 randomProducts 리스트를 사용하여 OrderDetails 객체를 생성하고 DB에 삽입하는 메서드
+    /**
+     * 주어진 orderId와 randomProducts 리스트를 사용하여 OrderDetails 객체를 생성하고 DB에 삽입하는 메서드
+     * 
+     * @param orderId        주문 ID
+     * @param randomProducts 랜덤 상품 리스트
+     */
     public void autoInsertOrderDetails(int orderId, final List<Products> randomProducts) {
         try {
             randomProducts.forEach(product -> insertOrderDetailAndDelivery(orderId, product));
@@ -29,13 +34,24 @@ public class OrderDetailsGenerator {
         }
     }
 
-    // 주어진 orderId와 product를 사용하여 OrderDetails 객체와 Deliveries 객체를 생성하고 DB에 삽입하는 메서드
+    /**
+     * 주어진 orderId와 product를 사용하여 OrderDetails 객체와 Deliveries 객체를 생성하고 DB에 삽입하는 메서드
+     * 
+     * @param orderId 주문 ID
+     * @param product 상품 정보
+     */
     private void insertOrderDetailAndDelivery(int orderId, Products product) {
         orderDetailsMapper.autoInsertOrderDetails(createOrderDetails(orderId, product));
         deliveriesGenerator.autoInsertDeliveries(orderId, product.getProduct_id());
     }
 
-    // 주어진 orderId와 product를 사용하여 OrderDetails 객체를 생성하는 메서드
+    /**
+     * 주어진 orderId와 product를 사용하여 OrderDetails 객체를 생성하는 메서드
+     * 
+     * @param orderId 주문 ID
+     * @param product 상품 정보
+     * @return OrderDetails
+     */
     private OrderDetails createOrderDetails(int orderId, Products product) {
         return OrderDetails.builder()
                 .order_id(orderId)
@@ -45,7 +61,11 @@ public class OrderDetailsGenerator {
                 .build();
     }
 
-    // 데이터 액세스 예외 처리를 위한 메서드
+    /**
+     * 데이터 액세스 예외 처리를 위한 메서드
+     * 
+     * @param e 데이터 액세스 예외
+     */
     private void handleDataAccessException(DataAccessException e) {
         log.error("An error occurred while inserting order details", e);
         throw new RuntimeException("An error occurred while inserting order details", e);

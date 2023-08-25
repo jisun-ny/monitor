@@ -22,7 +22,9 @@ public class ProductsGenerator {
 
     private final ProductsMapper productsMapper;
 
-    // 제품 정보를 JSON 파일에서 읽어와 DB에 삽입하는 메서드
+    /**
+     * 제품 정보를 JSON 파일에서 읽어와 DB에 삽입하는 메서드
+     */
     public void loadProductsFromFile() {
         try (InputStream inputStream = getProductsJsonInputStream()) {
             insertProductsIntoDatabase(readProductsFromJson(inputStream));
@@ -31,7 +33,12 @@ public class ProductsGenerator {
         }
     }
 
-    // 제품 정보가 있는 JSON 파일의 InputStream을 얻는 메서드
+    /**
+     * 제품 정보가 있는 JSON 파일의 InputStream을 얻는 메서드
+     * 
+     * @return InputStream
+     * @throws IOException 파일을 찾을 수 없을 때 발생
+     */
     private InputStream getProductsJsonInputStream() throws IOException {
         InputStream inputStream = getClass().getResourceAsStream("/static/Products.json");
         if (inputStream == null) {
@@ -40,7 +47,13 @@ public class ProductsGenerator {
         return inputStream;
     }
 
-    // InputStream에서 제품 정보를 읽어 List로 반환하는 메서드
+    /**
+     * InputStream에서 제품 정보를 읽어 List로 반환하는 메서드
+     * 
+     * @param inputStream 제품 정보 JSON 파일의 InputStream
+     * @return List<Products>
+     * @throws IOException 파일 읽기 중 오류 발생
+     */
     private List<Products> readProductsFromJson(InputStream inputStream) throws IOException {
         try (InputStreamReader reader = new InputStreamReader(inputStream)) {
             return new GsonBuilder().create().fromJson(reader, new TypeToken<List<Products>>() {
@@ -48,7 +61,11 @@ public class ProductsGenerator {
         }
     }
 
-    // 읽어온 제품 정보를 DB에 삽입하는 메서드
+    /**
+     * 읽어온 제품 정보를 DB에 삽입하는 메서드
+     * 
+     * @param products 제품 정보 리스트
+     */
     private void insertProductsIntoDatabase(List<Products> products) {
         try {
             for (int i = 0; i < products.size(); i += 100) {
@@ -59,13 +76,21 @@ public class ProductsGenerator {
         }
     }
 
-    // DB 삽입 중 발생한 예외를 처리하는 메서드
+    /**
+     * DB 삽입 중 발생한 예외를 처리하는 메서드
+     * 
+     * @param e 데이터 액세스 예외
+     */
     private void handleDatabaseException(DataAccessException e) {
         log.error("An error occurred while inserting products into the database", e);
         throw new RuntimeException("An error occurred while inserting products into the database", e);
     }
 
-    // 파일 읽기 중 발생한 예외를 처리하는 메서드
+    /**
+     * 파일 읽기 중 발생한 예외를 처리하는 메서드
+     * 
+     * @param e 파일 읽기 예외
+     */
     private void handleIOException(IOException e) {
         log.error("An error occurred while reading the products from the JSON file", e);
         throw new RuntimeException("An error occurred while reading the products from the JSON file", e);

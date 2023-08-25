@@ -30,9 +30,16 @@ public class DeliveriesServiceImpl implements DeliveriesService {
     @Value("${kakao.api.key}")
     private String kakaoApiKey;
 
+    /**
+     * 주어진 order_id에 대한 배달 정보를 가져와 처리하는 메서드.
+     * 이미 처리된 주문 ID인 경우, 추가 처리 없이 반환함.
+     * 
+     * @param order_id 주문 ID
+     */
     @Override
     public void getDeliveriesInfos(int order_id) {
-        if (processedOrderIds.contains(order_id)) return;
+        if (processedOrderIds.contains(order_id))
+            return;
         try {
             Info info = fetchDeliveryInfoFromKakao(deliveriesMapper.getDeliveryCoordinates(order_id));
             coordinateSender.sendCoordinates(info, order_id);
@@ -43,6 +50,12 @@ public class DeliveriesServiceImpl implements DeliveriesService {
         }
     }
 
+    /**
+     * Kakao API를 사용하여 배달 정보를 가져오는 메서드.
+     *
+     * @param deliveriesInfos 배달 정보
+     * @return Info Kakao API에서 가져온 배달 정보
+     */
     private Info fetchDeliveryInfoFromKakao(DeliveriesInfo deliveriesInfos) {
         HttpHeaders headers = new HttpHeaders();
         headers.set("Authorization", "KakaoAK " + kakaoApiKey);
@@ -61,6 +74,12 @@ public class DeliveriesServiceImpl implements DeliveriesService {
         return new Gson().fromJson(json, Info.class);
     }
 
+    /**
+     * 배달 정보를 기반으로 Kakao API에 요청할 URL을 생성하는 메서드.
+     *
+     * @param deliveriesInfos 배달 정보
+     * @return String 생성된 URL
+     */
     private String buildUrl(DeliveriesInfo deliveriesInfos) {
         return "https://apis-navi.kakaomobility.com/v1/directions" +
                 "?origin=" + deliveriesInfos.getStartLongitude() +
