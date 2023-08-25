@@ -3,9 +3,32 @@
 
 <mapper namespace="com.delivery.monitor.baskets.BasketsMapper">
 
+
+
+    <select id="getBasketsByOrderId">
+        SELECT d.latitude, d.longitude 
+        FROM deliveries d
+        JOIN Orders o ON o.order_id = d.order_id
+        WHERE o.order_id = #{order_id}
+    </select>
+    
+
+    <update id="updateBasketData" parameterType="Baskets" >
+        UPDATE Baskets SET temperature = #{temperature}, humidity = #{humidity} WHERE basket_id = #{basket_id}
+    </update> 
+
+    <select id="getAllBaskets">
+        SELECT basket_id, temperature, humidity FROM Baskets
+
+    </select>
+
     <insert id="autoInsertBaskets" parameterType="Baskets">
         INSERT INTO Baskets (product_id, delivery_id, temperature, humidity)
         VALUES (#{product_id}, #{delivery_id}, #{temperature}, #{humidity})
     </insert>
+
+     
+
+    
 
 </mapper>

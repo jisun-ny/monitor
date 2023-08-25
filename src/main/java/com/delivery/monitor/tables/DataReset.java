@@ -17,20 +17,25 @@ public class DataReset {
     public void resetDatabase() {
         try {
             log.info("Delete and auto increment reset");
-            tableMapper.deleteOrderDetails();
-            tableMapper.resetOrderDetailsAutoIncrement();
+
+            // Delete dependent tables first
             tableMapper.deleteBaskets();
-            tableMapper.resetBasketsAutoIncrement();
             tableMapper.deleteRecalls();
-            tableMapper.resetRecallsAutoIncrement();
+            tableMapper.deleteOrderDetails();
             tableMapper.deleteDeliveries();
-            tableMapper.resetDeliveriesAutoIncrement();
             tableMapper.deleteOrders();
-            tableMapper.resetOrdersAutoIncrement();
             tableMapper.deleteProducts();
-            tableMapper.resetProductsAutoIncrement();
             tableMapper.deleteAdmins();
+
+            // Reset auto increment values
             tableMapper.resetAdminsAutoIncrement();
+            tableMapper.resetProductsAutoIncrement();
+            tableMapper.resetOrdersAutoIncrement();
+            tableMapper.resetDeliveriesAutoIncrement();
+            tableMapper.resetRecallsAutoIncrement();
+            tableMapper.resetBasketsAutoIncrement();
+            tableMapper.resetOrderDetailsAutoIncrement();
+
             log.info("reset complete");
         } catch (Exception e) {
             log.error("Database reset failed", e);

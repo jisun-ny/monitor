@@ -12,4 +12,8 @@
         SELECT LAST_INSERT_ID()
     </select>
 
+    <select id = "getAllOrders" resultType="com.delivery.monitor.domain.Orders">
+        SELECT order_id, latitude, longitude FROM Orders
+    </select>
+
 </mapper>

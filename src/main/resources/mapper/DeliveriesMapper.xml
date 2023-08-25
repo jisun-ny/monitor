@@ -30,4 +30,12 @@
         WHERE o.order_id = #{order_id};
     </select>
 
+    <select id="getDeliveryListByOrderId" resultType="com.delivery.monitor.domain.Deliveries" parameterType="int">
+        SELECT d.delivery_id, d.latitude, d.longitude 
+        FROM Deliveries d
+        JOIN Orders o ON o.order_id = d.order_id
+        WHERE o.order_id = #{order_id};
+    </select>
+
+
 </mapper>
