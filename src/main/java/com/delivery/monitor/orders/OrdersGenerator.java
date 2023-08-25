@@ -28,7 +28,9 @@ public class OrdersGenerator {
     private final OrdersMapper ordersMapper;
     private final OrderDetailsGenerator orderDetailsGenerator;
 
-    // 주기적으로 자동 주문을 생성하고 DB에 삽입하는 메서드
+    /**
+     * 주기적으로 자동 주문을 생성하고 DB에 삽입하는 메서드
+     */
     @Transactional
     @Scheduled(initialDelay = 1000, fixedRate = 180000)
     public void autoInsertOrders() {
@@ -39,18 +41,30 @@ public class OrdersGenerator {
         }
     }
 
-    // 주문을 처리하는 로직을 수행하는 메서드
+    /**
+     * 주문을 처리하는 로직을 수행하는 메서드
+     * 
+     * @throws IOException
+     */
     private void processOrders() throws IOException {
         Faker faker = new Faker();
         List<Orders> jsonOrderInfo = readOrdersFromJson(getClass().getResourceAsStream("/static/Orders.json"));
         Orders orderInfo = jsonOrderInfo.get(faker.random().nextInt(jsonOrderInfo.size()));
         List<Products> randomProducts = productsMapper.getRandomProducts(faker.random().nextInt(1, 5));
-        Orders order = createOrder(randomProducts.size(), randomProducts.stream().mapToInt(Products::getPrice).sum(), orderInfo);
+        Orders order = createOrder(randomProducts.size(), randomProducts.stream().mapToInt(Products::getPrice).sum(),
+                orderInfo);
         insertOrders(order, randomProducts);
         orderDetailsGenerator.autoInsertOrderDetails(ordersMapper.getLastInsertOrderId(), randomProducts);
     }
 
-    // 주문 정보를 생성하는 메서드
+    /**
+     * 주문 정보를 생성하는 메서드
+     * 
+     * @param totalOrdered 총 주문 수량
+     * @param totalPrice   총 가격
+     * @param orderInfo    주문 정보
+     * @return Orders
+     */
     private Orders createOrder(int totalOrdered, int totalPrice, Orders orderInfo) {
         return Orders.builder()
                 .customer_name(orderInfo.getCustomer_name())
@@ -61,7 +75,12 @@ public class OrdersGenerator {
                 .build();
     }
 
-    // 주문 정보를 DB에 삽입하고 재고를 감소시키는 메서드
+    /**
+     * 주문 정보를 DB에 삽입하고 재고를 감소시키는 메서드
+     * 
+     * @param orders         주문 정보
+     * @param randomProducts 랜덤 상품 리스트
+     */
     private void insertOrders(Orders orders, List<Products> randomProducts) {
         try {
             ordersMapper.autoInsertOrders(orders);
@@ -74,7 +93,13 @@ public class OrdersGenerator {
         }
     }
 
-    // JSON 파일에서 주문 정보를 읽어오는 메서드
+    /**
+     * JSON 파일에서 주문 정보를 읽어오는 메서드
+     * 
+     * @param inputStream
+     * @return List<Orders>
+     * @throws IOException
+     */
     private List<Orders> readOrdersFromJson(InputStream inputStream) throws IOException {
         try (InputStreamReader reader = new InputStreamReader(inputStream)) {
             return new GsonBuilder().create().fromJson(reader, new TypeToken<List<Orders>>() {
@@ -82,7 +107,12 @@ public class OrdersGenerator {
         }
     }
 
-    // 일반적인 예외 처리를 위한 메서드
+    /**
+     * 일반적인 예외 처리를 위한 메서드
+     * 
+     * @param e            예외
+     * @param errorMessage 에러 메시지
+     */
     private void handleException(Exception e, String errorMessage) {
         log.error(errorMessage, e);
         throw new RuntimeException(errorMessage, e);

@@ -1,35 +1,5 @@
 {"properties": [
   {
-    "name": "mqtt.broker-url",
-    "type": "java.lang.String",
-    "description": "A description for 'mqtt.broker-url'"
-  },
-  {
-    "name": "mqtt.client-id",
-    "type": "java.lang.String",
-    "description": "A description for 'mqtt.client-id'"
-  },
-  {
-    "name": "mqtt.topic",
-    "type": "java.lang.String",
-    "description": "A description for 'mqtt.topic'"
-  },
-  {
-    "name": "mqtt.username",
-    "type": "java.lang.String",
-    "description": "A description for 'mqtt.username'"
-  },
-  {
-    "name": "mqtt.password",
-    "type": "java.lang.String",
-    "description": "A description for 'mqtt.password'"
-  },
-  {
-    "name": "kakao.api.key",
-    "type": "java.lang.String",
-    "description": "A description for 'kakao.api.key'"
-  },
-  {
     "name": "rabbitmq.queue.name",
     "type": "java.lang.String",
     "description": "A description for 'rabbitmq.queue.name'"
@@ -43,5 +13,10 @@
     "name": "rabbitmq.routing.key",
     "type": "java.lang.String",
     "description": "A description for 'rabbitmq.routing.key'"
+  },
+  {
+    "name": "kakao.api.key",
+    "type": "java.lang.String",
+    "description": "A description for 'kakao.api.key'"
   }
 ]}
