@@ -26,13 +26,13 @@ public class MonitorApplication {
 			AdminsGenerator adminsGenerator) {
 		return args -> {
 			log.info("Initializing database");
-			tableGenerator.resetDatabase();
+			// tableGenerator.resetDatabase();
 			log.info("Database initialized successfully");
 			log.info("Generating products");
 			productsGenerator.loadProductsFromFile();
 			log.info("Products generated successfully");
 			log.info("Generating Admins");
-			adminsGenerator.insertAdmins();
+			// adminsGenerator.insertAdmins();
 			log.info("Admins generated successfully");
 		};
 	}
